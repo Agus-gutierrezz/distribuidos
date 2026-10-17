@@ -17,3 +17,17 @@ Independencia vs. Comunicación: Analicen si los microservicios operan completam
 
 
 >Este ejemplo práctico está basado en los materiales educativos desarrollados por la ingeniera y creadora de contenido Luisina de Paula (TodoCode Academy). Todo el mérito por la estructura inicial del código corresponde a su labor docente y de divulgación en tecnología.
+
+## 1.
+### Mapa de Endpoints de Pacientes: @PostMapping ("/pacientes/crear"), @GetMapping ("/pacientes/traer"), @DeleteMapping("/pacientes/borrar/{id}"),  @PutMapping ("/pacientes/editar/{id_original}"), @GetMapping ("/pacientes/traer/{id}"), @GetMapping ("/pacientes/traerdni/{dni}").
+
+### Mapa de Endpoints de Turnos: @RequestMapping ("/turnos"),  @PostMapping ("/crear"), @GetMapping ("/traer"), @DeleteMapping("/borrar/{id}"), @PutMapping ("/editar/{id_original}"), @GetMapping ("/traer/{id}").
+
+## 2.
+### Paquete model: Contiene las clases con sus respectivos atributos que se convertiran en nuestras tablas en la base de datos.
+### Paquete controller: basicamente tiene las clases que nos sirve como puente para poder comunicarnos entre la vista y la implementación.
+### Paquete service: Contiene las interfaces donde se hará las firmas de los metodos, y tambien las clases donde se implementarán los metodos de las interfaces y se los sobreescribirá
+### Paquete repository: contiene las interfaces que extenderán de los metodos JPA para poder trabajar los datos ingresados junto con la base de datos.
+
+## 3.
+### Trabajan en conjunto, ya que turno necesita de un paciente existente para poder crearse.
